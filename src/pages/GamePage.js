@@ -8,7 +8,7 @@ function GamePage() {
     return (
         <div>
             <h1>{slug}</h1>
-            <Mylla />
+            <Mylla />   
         </div>
     );
 };

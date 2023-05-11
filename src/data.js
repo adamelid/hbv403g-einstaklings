@@ -2,15 +2,15 @@ const data = {
     themes: [
         {
             name: 'Wood board',
-            slug: 'wood-board',
+            slug: 'wood',
             description: 'This gives warm feeling',
-            image: '/images/woodBoard.jpg',
+            image: '/images/wood.jpg',
         },
         {
             name: 'Marble board',
-            slug: 'marble-board',
+            slug: 'marble',
             description: 'Elegant marble board',
-            image: '/images/marbleBoard.jpg',
+            image: '/images/marble.jpg',
         },
     ],
 };

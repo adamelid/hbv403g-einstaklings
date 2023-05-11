@@ -1,6 +1,7 @@
 import React, { useReducer } from 'react';
 import Board from './Board';
 import "./Mylla.css";
+import { useParams } from 'react-router-dom';
 
 const reducer = (state, action) => {
     switch (action.type) {
@@ -45,7 +46,7 @@ export default function Mylla() {
     const current = history[history.length-1];
     const sigurvegari = reiknaSigur(current.kassar);
 
-    const status = sigurvegari? sigurvegari === 'Jafnt'?'Jafntefli': 'Sigurvegari er' + sigurvegari:
+    const status = sigurvegari? sigurvegari === 'Jafnt'?'Jafntefli': 'Sigurvegari er ' + sigurvegari:
     'Næsti leikmaður er ' + (xIsNext?'X':'O');
     const moves = history.map((skref, move) => {
         const desc = move ? 'Fara tilbaka á #' + move: 'Hefja leik';
@@ -55,10 +56,11 @@ export default function Mylla() {
             </button>
         </li>
     });
-
+    const { slug } = useParams()
     return (
         <div className="game">
-            <div className="game-board">
+            <div className="game-board"
+                style={{backgroundImage: `url('../images/${slug}.jpg')`}}>
                 <Board 
                     onClick={(i) => handleClick(i)} 
                     kassar={current.kassar}
