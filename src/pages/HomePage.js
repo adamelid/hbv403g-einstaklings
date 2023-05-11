@@ -3,7 +3,7 @@ import data from "../data";
 
 function HomePage() {
     return <div>
-        <h1>Choose a theme</h1>
+        <h1>Veldu þema</h1>
         <div className="themes">
             {data.themes.map((theme) => (
                 <div className="theme" key={theme.slug}>
